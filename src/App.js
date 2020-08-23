@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import AbstractCard from "./components/AbstractCard";
+import Networker from "./components/Networker";
+import NetworkerTwo from "./components/NetworkerTwo";
+import Clicker from "./components/Clicker";
+import Hooker from "./components/Hooker";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Testing </p>
+      <NetworkerTwo />
+      <Hooker />
     </div>
   );
-}
+};
 
 export default App;

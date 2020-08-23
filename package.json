@@ -6,6 +6,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "antd": "^4.5.4",
+    "axios": "^0.19.2",
+    "faker": "^4.1.0",
+    "global": "^4.4.0",
+    "json-server": "^0.16.1",
+    "miragejs": "^0.1.40",
+    "node-fetch": "^2.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
@@ -14,7 +21,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "mock-server": "npx json-server ./seed/start-json-server.js --port 3004 --no-cors",
+    "gen:component": "node ./scripts/generate-react-component.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^7.22.3",
+    "nock": "^13.0.4"
   }
 }

@@ -1,9 +1,21 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+// app-test.js
+import React from "react";
+import { render, waitForElement } from "@testing-library/react";
+import App from "./App";
+import { serve } from "./mirage";
+import axios from "axios";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+let server;
+
+beforeEach(() => {
+  server = serve({ environment: "test" });
+});
+
+afterEach(() => {
+  server.shutdown();
+});
+
+it("shows the list of movies", async () => {
+  const users = await axios.get("/api/movies");
+  expect(users).toBe(false);
 });
