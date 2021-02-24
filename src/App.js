@@ -1,17 +1,11 @@
 import React from "react";
 import "./App.css";
-import AbstractCard from "./components/AbstractCard";
-import Networker from "./components/Networker";
-import NetworkerTwo from "./components/NetworkerTwo";
-import Clicker from "./components/Clicker";
-import Hooker from "./components/Hooker";
+import Hooks from "./components/Hooks/";
 
 const App = () => {
   return (
     <div className="App">
-      <p>Testing </p>
-      <NetworkerTwo />
-      <Hooker />
+      <Hooks />
     </div>
   );
 };

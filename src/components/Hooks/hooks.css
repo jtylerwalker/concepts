@@ -1,0 +1,15 @@
+/* The animation code */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+.box {
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+

@@ -1,0 +1,45 @@
+{
+  root: true,
+  parser: "babel-eslint",
+  extends: [
+    "@react-native-community",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  plugins: ["import"],
+  env: {
+    jest: true
+  },
+  rules: {
+    "react/prop-types": 0,
+    "react/require-default-props": 0,
+    "react-native/no-inline-styles": 0,
+    "react-native/no-color-literals": 2,
+    "react-native/split-platform-components":1,
+    "react/jsx-curly-brace-presence": [
+      1,
+      { props: "never", children: "ignore" }
+    ],
+    "import/newline-after-import": 2,
+    "import/first": 2,
+    "import/order": ["error"],
+    eqeqeq: 0,
+    "quotes": "off"
+  },
+  overrides: [
+    {
+      files: ["__mocks__/*", "e2e/**/*"],
+      rules: {
+        "no-undef": 0
+      }
+    },
+    {
+      files: ["coverage/**/*"],
+      rules: {
+        "eslint-comments/no-unlimited-disable": 0,
+        "eslint-comma-dangle": ["error", "never"],
+        "eslint-keyword-spacing": ["error", "never"]
+      }
+    }
+  ]
+}
