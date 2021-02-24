@@ -3,7 +3,10 @@
     from {background-color: red;}
     to {background-color: yellow;}
 }
-
+code, pre {
+    background-color: #f6f6f6;
+    padding: 5px;
+}
 .box {
     border: 1px solid black;
     height: 40px;
